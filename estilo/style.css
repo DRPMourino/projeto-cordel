@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Berkshire+Swash&family=Bungee&family=Dancing+Script&family=Passions+Conflict&family=Roboto:wght@400;700&family=Sriracha&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root { /*Cria atalhos para coisas que irei utilizar com frequencia durante o projeto*/
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Dancing Script', cursive;
+    --fonte3:'Sriracha', cursive;
+}
+
+* {
+    margin: 0px; 
+    padding: 0px;
+    /* Faz com que as frases fiquem mais grudadas no canto esquerdo*/
+    font-size: 1em; /* Tamanho padrão das letras*/
+}
+
+html, body {
+    min-height: 100vh; /*Usado para definir a altura mínima da viewport(a viewport é a porção de área visível de um plano).*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: var(--fonte2);
+}
+
+header > h1 {
+    padding-top: 50px;/*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+    font-variant: small-caps;/* Com essa propriedade você pode alterar as variantes normal e small-caps.*/
+    font-size: 10vw; /* Tamanho do título com base na largura da tela*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;/* Tirar o sublinhado*/
+    font-weight: bolder;/* Deixar a palavra em negrito*/
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;/* Aparecer o sublinhado quando passar o mouse em cima.*/
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;/*Espaçamento entre as frases.*/
+    padding-left: 30px; /*define uma a distância entre o conteúdo de um elemento e suas bordas para esquerda.*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal { /*section class=normal*/
+background-color: white;
+color: black;
+}
+
+section.imagem { /*section class=imagem*/
+background-color: rgb(169, 153, 153);
+color: white;
+box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473); /*Utilizado para adicionar efeitos de sombra em volta de um elemento*/
+background-size: cover; /*Define o tamanho da imagem de fundo do elemento*/
+background-attachment: fixed; /*Fixa na viewport ou rola com o bloco que a contém.*/
+}
+
+section.imagem>p { 
+    display: inline-block; /*Caixa que se adapta ao tamanho do conteúdo.*/
+    padding: 5px; /*Para não ficar colado na caixa.*/
+    background-color: rgb(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black; /*acrescenta sombras ao texto.*/
+
+}
+
+section#img01 { /*Por papel de fundo.*/
+background-image: url('../imagens/background001.jpg');
+}
+
+section#img02 { /*Por papel de fundo.*/
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 5px; /*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+}
